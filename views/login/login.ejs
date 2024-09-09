@@ -1,0 +1,36 @@
+<%- include('../../components/header.ejs') %>
+
+<style>
+    .main-container {
+        height: 100vh;
+        background-image: url('https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2022/07/18/fotografia-de-hamburguesas.jpeg');
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+
+<div class="main-container">
+    <div class="d-flex justify-content-center align-items-center full-height">
+        <div class="card mt-5 text-center" style="width: 25rem;">
+            <div class="card-body">
+                <div class="login-container">
+                    <h1>Burguer Week</h1>
+                    <form method="POST" action="">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    </form>
+                    <a href="/create">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../components/footer.ejs') %>

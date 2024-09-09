@@ -1,0 +1,24 @@
+<%- include('../../components/header.ejs') %>
+<div class="container mt-5">
+    <h2>Crear Hamburguesa</h2>
+    <form method="post" action="" enctype="multipart/form-data">
+        <div class="form-group mt-3">
+            <label for="nombre">Nombre de la Hamburguesa</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre de la Hamburguesa" required>
+        </div>
+        <div class="form-group mt-3">
+            <label for="descripcion">Descripción</label>
+            <textarea class="form-control" id="descripcion" name="descripcion" rows="3" placeholder="Descripción" required></textarea>
+        </div>
+        <div class="form-group mt-3">
+            <label for="precio">Precio</label>
+            <input type="number" class="form-control" id="precio" name="precio" placeholder="Precio" required>
+        </div>
+        <div class="form-group mt-3">
+            <label for="foto">Foto</label>
+            <input type="file" class="form-control" id="foto" name="photo" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Crear Hamburguesa</button>
+    </form>
+</div>
+<%- include('../../components/footer.ejs') %>

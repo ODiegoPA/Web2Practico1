@@ -1,0 +1,21 @@
+<%- include('../../components/header.ejs') %>
+<div class="container mt-5">
+    <h2><%= restaurante ? 'Editar Restaurante' : 'Crear Restaurante' %></h2>
+    <form method="post" action="" enctype="multipart/form-data">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="form-group mt-3">
+            <label for="nombre">Nombre del Restaurante</label>
+            <input type="text" class="form-control" name="nombre" value="<%= restaurante ? restaurante.nombre : '' %>" required>
+        </div>
+        <div class="form-group mt-3">
+            <label for="direccion">Dirección</label>
+            <input type="text" class="form-control" name="direccion" value="<%= restaurante ? restaurante.direccion : '' %>" required>
+        </div>
+        <div class="form-group mt-3">
+            <label>Foto de Perfil</label>
+            <input class="form-control" type="file" name="photo" <%= restaurante ? '' : 'required' %> />
+        </div>
+        <button type="submit" class="btn btn-primary mt-3"><%= restaurante ? 'Actualizar Restaurante' : 'Crear Restaurante' %></button>
+    </form>
+</div>
+<%- include('../../components/footer.ejs') %>
